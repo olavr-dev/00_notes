@@ -36,8 +36,8 @@ From the course **100 Days Of Code - 2024 Web Development Bootcamp** by Academin
 
 To delete the token from the computer (to be able to add a new one), run the following command in VSCode terminal:
 
-`git credential reject => ENTER`
+`git credential reject`
 
-`host=github.com => ENTER`
+`host=github.com`
 
-`protocol=https => ENTER`
+`protocol=https`
