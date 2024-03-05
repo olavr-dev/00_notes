@@ -42,14 +42,16 @@ Generate one by going to Github => Settings => Developer Settings => Personal Ac
 
 To delete the token from the computer (to be able to add a new one), run the following commands in the VSCode terminal:
 
-`git credential reject`
+`git credential reject` => Enter
 
-`host=github.com`
+`host=github.com` => Enter
 
-`protocol=https`
+`protocol=https` => Enter
 
 ## Collaborating with other people
 
 ### Invite other people to work on your private repository by following these steps:
 
 Repository => Settings => Collaborators => Add people
+
+After gaining access, you clone the repository and work on it as if it was your own. Collaborators will have push access.
