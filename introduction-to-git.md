@@ -47,3 +47,9 @@ To delete the token from the computer (to be able to add a new one), run the fol
 `host=github.com`
 
 `protocol=https`
+
+## Collaborating with other people
+
+### Invite other people to work on your private repository by following these steps:
+
+Repository => Settings => Collaborators => Add people
