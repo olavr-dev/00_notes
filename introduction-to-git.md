@@ -38,7 +38,7 @@ From the course **100 Days Of Code - 2024 Web Development Bootcamp** by Academin
 
 ### If you do not want to sign in to GitHub using the browser, you can use a Personal Access Token
 
-Generate one by going to Github => Settings => Developer Settings => Personal Access Tokens
+> Generate one by going to Github => Settings => Developer Settings => Personal Access Tokens
 
 To delete the token from the computer (to be able to add a new one), run the following commands in the VSCode terminal:
 
@@ -50,8 +50,25 @@ To delete the token from the computer (to be able to add a new one), run the fol
 
 ## Collaborating with other people
 
-### Invite other people to work on your private repository by following these steps:
+### Invite other people to work on your private repository by following these steps
 
-Repository => Settings => Collaborators => Add people
+> Repository => Settings => Collaborators => Add people
 
 After gaining access, you clone the repository and work on it as if it was your own. Collaborators will have push access.
+
+## Contributing to projects
+
+If you are not a collaborator, you can instead create a fork of the repository.
+This will enable you to work on open source projects.
+
+> Repository => Fork
+
+This will give you full access to this project as if it was your own.
+
+You can now clone it to import it into VSCode.
+
+After making your changes or maybe adding features, you can inform the user of the original repository by creating a pull request.
+
+> Repository => Pull requests
+
+Remember to give a detailed description of what changes you made.
