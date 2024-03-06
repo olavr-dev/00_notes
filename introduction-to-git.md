@@ -30,7 +30,7 @@ From the course **100 Days Of Code - 2024 Web Development Bootcamp** by Academin
 
 - Connect to a remote (GitHub) repository `git remote add origin (url)`
 
-- Push to repository `git push origin main` (pushed to origin on main branch)
+- Push to repository `git push -u origin main` (pushed to origin on main branch)
 
 - Clone a repository directly into open folder `git clone (url) .`
 
