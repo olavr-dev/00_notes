@@ -72,3 +72,5 @@ After making your changes or maybe adding features, you can inform the user of t
 > Repository => Pull requests
 
 Remember to give a detailed description of what changes you made.
+
+If someone submit a pull request on your repository with changes they made, you can choose to merge them into your main project.
