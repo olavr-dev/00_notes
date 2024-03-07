@@ -2,6 +2,8 @@
 
 ## Page Structure
 
+This is how you would want your `<body>` section to look like. Semantic tags are important for making it clear what type of content you are providing, and will also give better Google ranking.
+
 Header `<header>`
 
 Navigation Bar `<nav>`
