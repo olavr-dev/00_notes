@@ -14,6 +14,8 @@ Sidebar `<aside>` often placed inside `main`
 
 Footer `<footer>`
 
+You can take a section "out" of the document flow by setting its position to absolute or fixed. This will overlay the section on top of the page.
+
 ## Flexbox
 
 Use `display: flex` on the parent container
