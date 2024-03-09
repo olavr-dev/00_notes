@@ -25,3 +25,11 @@ Default mode is `flex-direction: row` so the children will be displayed beside e
 `flex-direction: column` will display them underneath each other.
 
 `flex-wrap: nowrap` is the default. Change to `flex-wrap: wrap` to make the flex move underneath each other when the screen size gets too small to show them side by side.
+
+## Images
+
+`object-fit: fill` default img style - may get distorted to fit the container.
+
+`object-fit: contain` retains the default aspect ratio, but may not fill the container.
+
+`object-fit: cover` scales to fit the container without distorting it.
