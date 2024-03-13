@@ -24,10 +24,25 @@ For example: A nav bar works best with `flexbox` and a container filled with con
 
 ## Media Queries
 
-`@media (min width or max-width: 1200px){ }`
+`@media only screen and (device-width:  max-width: 1200px){ }`
 
 **You can set as many media query breakpoints you like.**
 
 Desktop first use `max-width` and scales downwards.
 
 Mobile first use `min-width` and scales upwards.
+
+### Common breakpoints
+
+#### Portrait Mode
+
+- Smartphones - `480px`
+- Tablets - `768px`
+
+#### Landscape Mode
+
+- Mobile devices – `320px` —`480px`
+- iPads, Tablets – `481px` — `768px`
+- Small screens, laptops – `769px` —`1024px`
+- Desktops, large screens – `1025px`—`1200px`
+- Extra large screens, TV – `1201px`, and more
