@@ -8,7 +8,7 @@ For example: A nav bar works best with `flexbox` and a container filled with con
 
 ## Font Size Units
 
-`px` Easy to understand, but limited user focus and not scalable. If you set `font-size` to a pixel value, it will not scale with their browser's font size scaling. Not suitable for responsive design.
+`px` Easy to understand, but limited user focus and not scalable. If you set `font-size` to a pixel value, it will not scale with their browser's font size scaling. Not suitable for responsive design, and bad for accessability.
 
 `%` Relative to the parent element size. Hard to manage due to cascading nature, such as nested elements.
 
