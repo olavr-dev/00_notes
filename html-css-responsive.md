@@ -46,3 +46,11 @@ Mobile first use `min-width` and scales upwards.
 - Small screens, laptops – `769px` —`1024px`
 - Desktops, large screens – `1025px`—`1200px`
 - Extra large screens, TV – `1201px`, and more
+
+## 3 Important things to remember
+
+### Add different features step by step
+
+### Think about the core information that should be transferred to the end user
+
+### Less is more! - Do not over-style your website
