@@ -49,8 +49,8 @@ Mobile first use `min-width` and scales upwards.
 
 ## 3 Important things to remember
 
-### Add different features step by step
+Add different features step by step
 
-### Think about the core information that should be transferred to the end user
+Think about the core information that should be transferred to the end user
 
-### Less is more! - Do not over-style your website
+Less is more! - Do not over-style your website
