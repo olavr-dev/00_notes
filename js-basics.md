@@ -41,6 +41,10 @@ Syntax is the "grammar" of a programming language. You have to adhere to certain
 
 `"42"` This is a String (text)
 
+`['Hello', 'Goodbye', 'How are you?']` This is an Array. A collection of values.
+
+`{ title: 'Web Developer', location: 'Sandnes', salary: 750000 }` This is an Object. A collection of properties. Instead of having three let variables you group them all into an object. Note the colon instead of an equal sign for setting the value.
+
 ## Understanding Variables
 
 Variables are data containers where you can store values.
