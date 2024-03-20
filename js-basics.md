@@ -49,9 +49,13 @@ Syntax is the "grammar" of a programming language. You have to adhere to certain
 
 Variables are data containers where you can store values.
 
-`var` Legacy variable. Do not use. Replaced by `let`
+`var age = 42` Legacy variable. Still works, but do not use. It has been replaced by `let`
 
-`let` This variable can be set and overwritten
+`let age = 42` This variable can be set and overwritten
+
+If you want to overwrite the value of age, you do not use the let keyword, but only the name:
+
+`age = 44`
 
 `const`
 
@@ -61,3 +65,40 @@ Variables are data containers where you can store values.
 - Be descriptive in your variables
 - Stick to either double quotes or single quotes. Both are equally fine, but do not use both randomly.
 - Semicolons are optional, but it will clearly mark where a line ends. Be consistent. Always use them, or never.
+- Function names should say something about what the operation does. Not what is is used for.
+
+## Math Operations
+
+`10` numbers without decimals are called integers
+
+`5.5` numbers without decimals are called floating point numbers or just floats for short.
+
+`10 / 4` returns 2.5, a float
+
+`10 % 4` using the modulus operator, it returns 2, an integer.
+
+`10 / 4 => 2 * 4 => Remainder: 2` how the modulus operator works
+
+### Some Examples
+
+`let result = (10 + 3 - 5) * 10` Stores the result in a variable
+
+`result = 10 * 4` Overwrites the result variable (Sets it to 40)
+
+`result++` same as result = result + 1
+
+`result--` same as result = result - 1
+
+`result += 5` same as result = result + 5
+
+`result -= 5` same as result = result - 5
+
+`result *= 5` same as result = result \* 5
+
+`result /= 5` same as result = result / 5
+
+## String Operations
+
+`'Olav' + ' ' + 'Øye Rørvik'` Concatenates the strings together to show Olav Øye Rørvik
+
+**Only the + symbol works for concatenations.**
