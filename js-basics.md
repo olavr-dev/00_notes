@@ -102,3 +102,39 @@ If you want to overwrite the value of age, you do not use the let keyword, but o
 `'Olav' + ' ' + 'Øye Rørvik'` Concatenates the strings together to show Olav Øye Rørvik
 
 **Only the + symbol works for concatenations.**
+
+## Manipulating the DOM
+
+### DOM stands for Document Object Model, and that is a long-winded way to say your web page
+
+`window` and `document`
+
+These are build in variables and functions
+
+Window Object `window` means everything in the browser window (including the current tab).
+
+The Document Object `window.document` means everything on the web page.
+
+We can use the document object to manipulate the HTML and CSS of the web page without reloading the page.
+
+#### Since the browser parses all HTML code and saves all elements as JavaScript objects, we can use our JavaScript code to extract data from it or manipulate it
+
+### Selecting DOM Elements
+
+There are two main ways to select DOM elements:
+
+#### You can "drill" into the document object
+
+`document.body.children[2].children[0].href = 'https://google.com'`
+
+This will select the `<body>` => 3rd child `<p>` => 1st child `<a>` and set `href=""` to `href="https://google.com"`
+
+#### You can query elements. This is often easier as you do not have to remember the exact structure of the DOM
+
+`document.getElementById('some-id')`
+
+This will select the HTML element that has `id="#some-id"`
+
+`document.querySelector('.some-class')`
+
+This will select any HTML elements that has `class="some-class"`
