@@ -137,4 +137,14 @@ This will select the HTML element that has `id="#some-id"`
 
 `document.querySelector('.some-class')`
 
-This will select any HTML elements that has `class="some-class"`
+This will select the first HTML element that has `class="some-class"` and return a single element.
+
+`document.querySelectorAll('.some-class')`
+
+This will select all HTML elements that has `class="some-class"` and return an array.
+
+### Changing HTML element content with JavaScript
+
+Accessing the element and adding `.textContent` will let you replace the element's content with plain text.
+
+Accessing the element and adding `.innerHTML` will let you replace the element's content with a mix of plain text and new HTML elements.
