@@ -166,4 +166,4 @@ A function that is passed as a parameter value to another function or method to 
 
 `function nameOfFunction(){ variable = 'string' }`
 
-`elementName.addEventListener('click', nameOfFunction` (the callback function does not use `()` )
+`elementName.addEventListener('click', nameOfFunction` (the callback function does not use `()` ) This is to let the browser know that the function exists, but we do not want to execute it until the click happens.
