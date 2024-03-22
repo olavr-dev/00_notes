@@ -148,3 +148,22 @@ This will select all HTML elements that has `class="some-class"` and return an a
 Accessing the element and adding `.textContent` will let you replace the element's content with plain text.
 
 Accessing the element and adding `.innerHTML` will let you replace the element's content with a mix of plain text and new HTML elements.
+
+## Events
+
+- User clicks on an element (e.g. a button)
+- User types into an input field
+- User scrolls to a certain part of the page
+- Mouse movements
+
+`someElement.addEventListener('<EVENT>', ...)`
+
+### Callback Function
+
+A function that is passed as a parameter value to another function or method to be executed in the future.
+
+#### Example
+
+`function nameOfFunction(){ variable = 'string' }`
+
+`elementName.addEventListener('click', nameOfFunction` (the callback function does not use `()` )
