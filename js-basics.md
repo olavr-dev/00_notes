@@ -57,8 +57,6 @@ If you want to overwrite the value of age, you do not use the let keyword, but o
 
 `age = 44`
 
-`const`
-
 ## Best Practices
 
 - Use camelCase when naming variables
@@ -167,3 +165,17 @@ A function that is passed as a parameter value to another function or method to 
 `function nameOfFunction(){ variable = 'string' }`
 
 `elementName.addEventListener('click', nameOfFunction` (the callback function does not use `()` ) This is to let the browser know that the function exists, but we do not want to execute it until the click happens.
+
+## Variables vs Constants
+
+### Variables
+
+`let name = 'Olav'`
+
+`name = 'Kristin'` This sets the `name` variable to Kristin instead of Olav
+
+### Constants
+
+`const name = 'Olav'` This cannot be overwritten and never changes
+
+The purpose of using `const` instead of `let` that never changes is to provide extra safety and avoid potential errors and bugs.
