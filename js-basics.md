@@ -222,4 +222,6 @@ You will typically derive boolean values with help of **Comparison Operators** a
 
 `||` OR - Returns true if one of the values are true
 
+_AND_ has higher priority than _OR_
+
 ### Loops
