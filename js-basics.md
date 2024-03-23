@@ -179,3 +179,47 @@ A function that is passed as a parameter value to another function or method to 
 `const name = 'Olav'` This cannot be overwritten and never changes
 
 The purpose of using `const` instead of `let` that never changes is to provide extra safety and avoid potential errors and bugs.
+
+## Managing CSS Classes with JavaScript
+
+### className
+
+This will overwrite the elements original class, or add it if it doesn't already have one.
+
+`someElement.className = 'warning'`
+
+### classList
+
+This is a number of objects that will let you manage classes easily.
+
+`someElement.classList.add('warning')`
+
+`someElement.classList.remove('warning')`
+
+## Control Structures
+
+Special syntax that allow you to control under which conditions code is executed and how often some code is executed.
+
+### if-Statements
+
+If statements require a **Boolean Value** (or just **Boolean** for short.)
+
+A boolean can only be one of two values: `true` or `false`
+
+You will typically derive boolean values with help of **Comparison Operators** and also **Logical Operators**
+
+#### Comparison Operators
+
+`==` `===` Equality Operators
+
+`>` `<` `>=` `<=` Greater/Lesser Than - Greater/Lesser Than or Equal
+
+`!` `!=` `!==` Negation Operators - i.e something is _NOT_ true, or _NOT_ equal
+
+#### Logical Operators
+
+`&&` AND - Returns true if both combined values are true
+
+`||` OR - Returns true if one of the values are true
+
+### Loops
