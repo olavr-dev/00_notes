@@ -225,3 +225,15 @@ You will typically derive boolean values with help of **Comparison Operators** a
 _AND_ has higher priority than _OR_
 
 ### Loops
+
+Allows you to execute certain code several times.
+
+#### In JavaScript you have four types of loops
+
+`for` Loop _n_ number of times
+
+`for ... of` Loops through all elements of an **array**
+
+`for ... in` Loops through all properties in an **object**
+
+`while` Loops as long as certain condition is met
