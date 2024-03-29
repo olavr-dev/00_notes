@@ -149,10 +149,10 @@ Accessing the element and adding `.innerHTML` will let you replace the element's
 
 ## Events
 
-- User clicks on an element (e.g. a button)
-- User types into an input field
-- User scrolls to a certain part of the page
-- Mouse movements
+- User clicks on an element (e.g. a button).
+- User types into an input field.
+- User scrolls to a certain part of the page.
+- Mouse movements.
 
 `someElement.addEventListener('<EVENT>', ...)`
 
