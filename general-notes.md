@@ -46,3 +46,21 @@ It's important to organize the CSS properties the same way for each element, and
 - `overflow`
 - `opacity`
 - `... anything else`
+
+## Frontend, Backend & Fullstack
+
+### The "Frontend"
+
+Executes in the browser / on the visitor's machine.
+
+This is the code that controls what the user sees and interacts with.
+
+`HTML` `CSS` `JavaScript`
+
+### The "Backend"
+
+Executes on the server / a remote machine.
+
+The code that controls what is being server & executes "behind the scenes".
+
+May parse and store incoming data, fetch data, store files, and more...
