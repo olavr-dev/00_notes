@@ -8,6 +8,14 @@ Some languages are more suited for this though, and some of the more popular one
 
 `Python` `PHP` `C#` `NodeJS (JavaScript)`
 
+## File and Folder Names for Backend Development
+
+`app.js` This is the common file name for the main js file
+
+`views` This is the common folder name for the html files being served dynamically and not available to the public directly.
+
+`public` This is the common folder name for static files like stylesheets, scrips and images. These are directly available to the public. (can be accessed via the url field)
+
 ## NodeJS
 
 NodeJS is JavaScript for the server-side. It is a JavaScript Runtime.
