@@ -14,13 +14,20 @@ NodeJS is JavaScript for the server-side. It is a JavaScript Runtime.
 
 It is JavaScript as learned for frontend use, but with more features like read + write files, parse incoming requests, send responses and more.
 
-### How to connect to a server
+### How to connect to a server using NodeJS
 
-`const http = require('http')` The require function is built into NodeJS
+```javascript
+const http = require('http'); // The require function is built into NodeJS
 
-`const server = http.createServer()`
+function handleRequest(request, response) {
+  response.statusCode = 200;
+  response.end('<h1>Hello, world!</h1>');
+}
 
-`server.listen()` Listen to server at port
+const server = http.createServer();
+
+server.listen(3000); // Listen to server at port 3000
+```
 
 #### Example of how you would connect to a website
 
@@ -41,3 +48,35 @@ Web servers communicate the status of a request & response via standardized stat
 `401` **Client-side error!** The requesting client (user) is not authorized to access the requested resource / URL (e.g. not being logged in.)
 
 `500` **Server-side error!** The request was valid but something went wrong on the server. The expected response could not be generated.
+
+## Easier NodeJS Development with ExpressJS
+
+ExpressJS is a third-party NodeJS library
+
+### Installing ExpressJS with NPM
+
+`npm init` This will initialize NPM and set up a package.json file.
+
+`npm install express` This will install express and all dependencies.
+
+### How to connect to a server using ExpressJS
+
+#### _Express will set the server status code to 200 by default_
+
+```javascript
+const express = require('express');
+
+const app = express();
+
+// localhost:3000/currenttime
+app.get('/currenttime', function (request, response) {
+  response.send('<h1>' + new Date().toISOString() + '</h1>');
+});
+
+// localhost:3000/
+app.get('/', function (request, response) {
+  response.send('<h1>Hello, world!</h1>');
+});
+
+app.listen(3000);
+```
