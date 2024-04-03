@@ -51,7 +51,7 @@ Web servers communicate the status of a request & response via standardized stat
 
 ## Easier NodeJS Development with ExpressJS
 
-ExpressJS is a third-party NodeJS library
+ExpressJS is a third-party NodeJS library that simplifies the creation of web servers and the handling of requests and responses.
 
 ### Installing ExpressJS with NPM
 
@@ -80,3 +80,29 @@ app.get('/', function (request, response) {
 
 app.listen(3000);
 ```
+
+To run the app on the local server, use `node app.js` (replace app.js with your js file)
+
+In the terminal, to exit out of the server, click `CTRL + C`
+
+Restart the server when you save changes to the app.
+
+## Installing nodemon
+
+This package will make it easier to test your code without having to stop and start the server for every change / save.
+
+`npm install nodemon --save-dev`
+
+`--save-dev` this marks nodemon as dev dependency used for development.
+
+Add the following script to package.json
+
+```json
+"scripts":{
+  "start": "nodemon app.js"
+}
+```
+
+To run the app on the local server, use `npm start`
+
+`"start":` is a reserved special script name. If you name the script anything else you have to start it with `npm run your-script-name`
