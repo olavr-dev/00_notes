@@ -225,3 +225,56 @@ You can then include these .ejs files where you want to render this html content
 `<%= contentHere %>` This will escape any content added by the user for security purposes and output it as plain text.
 
 `<&- contentHere %>` This will not escape any content and will output anything including html code and scripts.
+
+### Dynamic Routes
+
+When you are not sure how many pages will be served, we use dynamic routes which generates new pages on demand.
+
+We use the `:` operator to set the dynamic route id.
+
+```javascript
+app.get('/restaurants/:id', function (req, res) {
+  const restaurantId = req.params.id;
+  res.render('restaurant-details', { rid: restaurantId });
+});
+```
+
+Then call the rid key where you need to insert the unique ID.
+
+`<%= rid %>`
+
+### Generate Unique ID's
+
+Use the uuid package (Uniform Unique ID) to generate these easily.
+
+`npm install uuid`
+
+Reference the package in app.js
+
+`const uuid = require('uuid')`
+
+Add the uuid method to the object you wish to add the unique ID to.
+
+`restaurant.id = uuid.v4()` This generates a random ID and adds it to the restaurant object.
+
+Where you want to use the random ID:
+
+`<%= restaurant.id %>`
+
+### Error Handling
+
+It is good practice to add a custom middleware function to catch 404 (page not found) errors.
+
+```javascript
+app.use(function (req, res) {
+  res.render('404'); // Redirects to a custom 404.ejs file.
+});
+```
+
+#### Express default error handling function
+
+```javascript
+app.use(function (error, req, res, next) {
+  res.render('500'); // Redirects to a custom 500.ejs file.
+});
+```
