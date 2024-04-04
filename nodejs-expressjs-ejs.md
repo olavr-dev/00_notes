@@ -278,3 +278,18 @@ app.use(function (error, req, res, next) {
   res.status(500).render('500'); // Redirects to a custom 500.ejs file.
 });
 ```
+
+### Sorting Restaurants
+
+Telling the browser if the objects should swap places in the array.
+
+```javascript
+const restaurants = resData.getStoredRestaurants();
+
+restaurants.sort(function (resA, resB) {
+  if (resA.name > resB.name) {
+    return 1;
+  }
+  return -1;
+});
+```
