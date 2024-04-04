@@ -267,7 +267,7 @@ It is good practice to add a custom middleware function to catch 404 (page not f
 
 ```javascript
 app.use(function (req, res) {
-  res.status().render('404'); // Redirects to a custom 404.ejs file.
+  res.status(404).render('404'); // Redirects to a custom 404.ejs file.
 });
 ```
 
@@ -275,6 +275,6 @@ app.use(function (req, res) {
 
 ```javascript
 app.use(function (error, req, res, next) {
-  res.status().render('500'); // Redirects to a custom 500.ejs file.
+  res.status(500).render('500'); // Redirects to a custom 500.ejs file.
 });
 ```
