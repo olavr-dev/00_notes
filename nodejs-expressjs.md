@@ -155,3 +155,73 @@ app.get('/', function (req, res) {
 ```
 
 This renders a template. Parsing a template file with the help of a template engine and convert it to html that will be sent back to the browser.
+
+In the .ejs template file, specify the key using this syntax:
+
+`<%= nameOfKey %>`
+
+In app.js, add this key to the render method as a second parameter.
+
+```javascript
+app.get('/', function (req, res) {
+  res.render('index', { nameOfKey: variableToShow });
+});
+```
+
+#### Writing your own EJS logic using a for loop
+
+In app.js
+
+```javascript
+app.get('/restaurants', function (req, res) {
+  const filePath = path.join(__dirname, 'data', 'restaurants.json');
+
+  const fileData = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(fileData);
+
+  res.render('restaurants', { numberOfRestaurants: storedRestaurants.length, restaurants: storedRestaurants });
+});
+```
+
+In restaurants.ejs
+
+```html
+<main>
+  <h1>Recommended restaurants</h1>
+  <p>Find your next favorite restaurants with help of our other users!</p>
+  <p>We found <%= numberOfRestaurants %> restaurants.</p>
+  <ul id="restaurants-list">
+    <% for (const restaurant of restaurants) { %>
+    <li class="restaurant-item">
+      <article>
+        <h2><%= restaurant.name %></h2>
+        <div class="restaurant-meta">
+          <p><%= restaurant.cuisine %></p>
+          <p><%= restaurant.address %></p>
+        </div>
+        <p><%= restaurant.description %></p>
+        <div class="restaurant-actions">
+          <a href="<%= restaurant.website %>">View Website</a>
+        </div>
+      </article>
+    </li>
+    <% } %>
+  </ul>
+</main>
+```
+
+### EJS Includes
+
+Includes are .ejs files that contain parts of a page. Used to split large files into more manageable pieces.
+
+You split parts of the html page into separate .ejs files. One for the `header`, one for the `main`, one for the `footer` etc.
+
+You can then include these .ejs files where you want to render this html content.
+
+`<%- include('includes/header') %>` Path is relative to file. File extensions are omitted.
+
+#### NOTE
+
+`<%= contentHere %>` This will escape any content added by the user for security purposes and output it as plain text.
+
+`<&- contentHere %>` This will not escape any content and will output anything including html code and scripts.
