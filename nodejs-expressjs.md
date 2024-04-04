@@ -114,3 +114,44 @@ Add the following script to package.json
 To run the app on the local server, use `npm start`
 
 `"start":` is a reserved special script name. If you name the script anything else you have to start it with `npm run your-script-name`
+
+## Template Engines
+
+Templates are placeholders within the HTML code with different syntax.
+
+One of the most popular Express template engine is EJS (Embedded JavaScript Templating).
+
+Command to install the EJS package for your project:
+
+`npm install ejs`
+
+Enable the engine in your project. Typically the first thing after creating the app object.
+
+`app.set('views', path.join(__dirname, 'views'))`
+
+`app.set('view engine', 'ejs')`
+
+Convert the html files you want to use to ejs files.
+
+`index.html` => `index.ejs`
+
+### Serving HTML files dynamically
+
+Instead of creating a file path and sending back the file manually with Express
+
+```javascript
+app.get('/', function (req, res) {
+  const htmlFilePath = path.join(__dirname, 'views', 'index.html');
+  res.sendFile(htmlFilePath);
+});
+```
+
+Using EJS you can instead use the `render()` method on the response object.
+
+```javascript
+app.get('/', function (req, res) {
+  res.render('index'); //index.ejs, but omit the file extension.
+});
+```
+
+This renders a template. Parsing a template file with the help of a template engine and convert it to html that will be sent back to the browser.
