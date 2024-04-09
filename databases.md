@@ -109,3 +109,17 @@ Both systems can be used for any given use-case.
 **NoSQL** databases can be more flexible and reduce amount of require queries.
 
 You can use both a the same time as well.
+
+## Popular SQL Systems
+
+### MySQL
+
+Open Source - The most popular SQL database system.
+
+### PostgreSQL
+
+Open Source - Also very popular.
+
+### Microsoft SQL
+
+Closed Source - Requires a commercial license.
