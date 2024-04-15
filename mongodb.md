@@ -1,57 +1,71 @@
 # MongoDB - NoSQL Database
 
-MongoDB uses collections (tables) and documents (entries).
+MongoDB uses collections (_"tables"_) and documents (_entries_).
 
-## Starting MongoDB
+## Setting up a MongoDB database from scratch
 
-- Windows Services > Start MongoDB
-- Terminal: `mongosh`
+Using the blog course exercise from the 100 days of code bootcamp as an example.
+
+- [ ] Make sure MongoDB is running on windows:
+  - [ ] Go to Windows Services
+  - [x] Start MongoDB
+
+Start MongoDB in the terminal => `mongosh`
 
 ### Show databases
 
-`show dbs`
+To view all databases running on the server: `show dbs`
 
-### Setting up a server
+### Creating a new database
 
-`use name-of-server` server will be created automatically.
+The database will be created automatically when you start adding to it.
 
-### Inserting data (document) into the collection (restaurants)
+`use name-of-database`
 
-`db.restaurants.insertOne({ name: "Jonas B Jærhagen", address: { street: "Jærveien", streetNumber: "1902" } })`
+### Inserting data (_document_) into the collection (_restaurants_)
 
-#### Another Example
+_You can also use_ `insertMany()`
 
-`db.restaurants.insertOne({ name: "McDonalds Mariero", address: { street: "Hetlandsgata", streetNumber: "13", postalCode: 4006, city: "Stavanger", country: "Norway" }, type: { typeId: ObjectId("661a4d28139820189b16c9ba"), name: "American" } })`
-
-```yaml
-{
-  _id: ObjectId('661a4fe8139820189b16c9be'),
-  name: 'McDonalds Mariero',
-  address: { street: 'Hetlandsgata', streetNumber: '13', postalCode: 4006, city: 'Stavanger', country: 'Norway' },
-  type: { typeId: ObjectId('661a4d28139820189b16c9ba'), name: 'American' },
-}
+```js
+db.authors.insertOne({ name: 'Olav Øye Rørvik', email: 'olav@test.com' });
 ```
+
+### View entries in the document
+
+`db.authors.find()` This will list all entries.
 
 ### Filtering
 
-`db.restaurants.find()` Lists all documents in the collection.
+`db.authors.find()` Lists all documents in the collection.
 
-`db.restaurants.find({ name: "Jonas B Jærhagen"})` More specific filter
+`db.authors.find({ name: "Olav Øye Rørvik"})` More specific filter
 
 #### 1 is include - 0 is exclude from filtering
 
-`db.restaurants.find({}, {name: 1})` Filters for name and id only
+`db.authors.find({}, {name: 1})` Filters for name and id only
 
-`db.restaurants.find({}, {name: 1, _id: 0})` Filters for name only ===
+`db.authors.find({}, {name: 1, _id: 0})` Filters for name only
 
 ### Updating documents
 
-`db.restaurants.updateOne({ _id: ObjectID("66197c47139820189b16c9b5") }, { $set: { "address.street": "Some Street" } })`
+`db.authors.updateOne({ _id: ObjectID("661cc797386772fe5816c9b5") }, { $set: { "name": "Olav Ø Rørvik" } })`
 
 ### Deleting documents
 
-`db.restaurants.deleteOne({ _id: ObjectID("66197c47139820189b16c9b5") })`
+`db.authors.deleteOne({ _id: ObjectID("661cc797386772fe5816c9b5") })`
 
 #### Deleting all documents
 
-`db.restaurants.deleteMany({})`
+`db.authors.deleteMany({})` Deletes all entries.
+
+## Connecting a NodeJS app to MongoDB
+
+```javascript
+const client = await MongoClient.connect('mongodb://localhost:27017)
+```
+
+**_Note: Using NodeJS 18 and higher may fail using localhost. Use IP instead:_**
+
+```javascript
+const client = await MongoClient.connect('mongodb://127.0.0.1:27017)
+```
