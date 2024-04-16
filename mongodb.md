@@ -50,7 +50,7 @@ db.authors.insertOne({ name: 'Olav Øye Rørvik', email: 'olav@test.com' });
 
 `db.authors.updateOne({ _id: ObjectID("661cc797386772fe5816c9b5") }, { $set: { "name": "Olav Ø Rørvik" } })`
 
-### Deleting documents
+### Deleting documents ===
 
 `db.authors.deleteOne({ _id: ObjectID("661cc797386772fe5816c9b5") })`
 
@@ -60,12 +60,52 @@ db.authors.insertOne({ name: 'Olav Øye Rørvik', email: 'olav@test.com' });
 
 ## Connecting a NodeJS app to MongoDB
 
+_*data/database.js*_
+
 ```javascript
-const client = await MongoClient.connect('mongodb://localhost:27017)
+const mongodb = require('mongodb');
+
+const MongoClient = mongodb.MongoClient;
+
+// Database variable created outside of the connect function
+// This makes it usable anywhere in this file
+let database;
+
+async function connect() {
+  const client = await MongoClient.connect('mongodb://localhost:27017');
+  database = client.db('blog');
+}
+
+function getDb() {
+  if (!database) {
+    throw { message: 'Database connection not established!' };
+  }
+  return database;
+}
+
+// Make connect() and getDb() functions available to the rest of the project
+module.exports = {
+  connectToDatabase: connect,
+  getDb: getDb,
+};
 ```
 
 **_Note: Using NodeJS 18 and higher may fail using localhost. Use IP instead:_**
 
 ```javascript
-const client = await MongoClient.connect('mongodb://127.0.0.1:27017)
+const client = await MongoClient.connect('mongodb://127.0.0.1:27017');
+```
+
+_*app.js*_
+
+```javascript
+// Import the database (Start of file)
+const db = require('./data/database');
+```
+
+```javascript
+// Only listen to port 3000 if connected to the database. (End of file)
+db.connectToDatabase().then(function () {
+  app.listen(3000);
+});
 ```
