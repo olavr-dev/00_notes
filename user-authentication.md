@@ -107,6 +107,9 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: sessionStore,
+    cookie: {
+      maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days - leave out for infinite.
+    },
   })
 );
 ```
