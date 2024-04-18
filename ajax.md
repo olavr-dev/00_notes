@@ -52,6 +52,8 @@ Looks a lot like HTML which is based on XML, but HTML is standardized and XML is
 
 XML is too verbose with all the tags wrapping the text, and is a lot of unnecessary work.
 
+>
+
 #### Modern web development has moved on to use JSON (**J**ava**S**cript **O**bject **N**otation) instead of XML
 
 ```json
@@ -72,3 +74,16 @@ An object built into browser-side JavaScript that contains utility methods for s
 - Uses modern JavaScript features like Promises
 - Relatively straightforward to use
 - Alternative to XMLHttpRequest and third-party libraries like [Axios](https://axios-http.com/docs/intro)
+
+## More HTTP Methods
+
+### Default browser methods
+
+- `GET` Fetch some data
+- `POST` Store some data
+
+### Ajax / JavaScript driven Http requests
+
+- `PUT` Replace / Update some data
+- `PATCH` Update some data
+- `DELETE` Delete some data
